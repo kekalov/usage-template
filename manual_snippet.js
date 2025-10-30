@@ -1,7 +1,5 @@
-// -- https://corp.p.ostrovok.ru/hotel/russia/moscow/mid7597068/park_inn_by_radisson_sadu/?q=2395&dates=28.06.2025-10.07.2025&guests=2and2-3&travellers=1973854-555.-8223_..&ec=02&meal_types=nomeal.breakfast&stars=1.2.3&sid=230411aa-85a3-4b69-93ab-85967db5bacf
-
 (async function () {
-  const usageUrl = "https://of.worldota.net/travel/usage.json";
+  const usageUrl = "your_storage/usage.json";
 
   try {
     const res = await fetch(usageUrl);
