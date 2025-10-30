@@ -1,0 +1,40 @@
+import json
+import os
+
+# Демонстрационный синтетический usage.json
+usage = [
+    {
+        "category": "demo",
+        "action": "click",
+        "label": "search_button",
+        "selector": ".test-button",
+        "session_cnt": 120,
+        "session_cnt_prev": 100,
+        "session_dif_abs": 20,
+        "percent_of_total": 0.6,
+        "percent_of_total_dif": 0.1,
+        "percent_of_page": 3.5,
+        "percent_of_page_dif": 0.2,
+        "link": "#"
+    },
+    {
+        "category": "demo",
+        "action": "scroll",
+        "label": "main_banner",
+        "selector": ".main-banner",
+        "session_cnt": 55,
+        "session_cnt_prev": 60,
+        "session_dif_abs": -5,
+        "percent_of_total": 0.3,
+        "percent_of_total_dif": -0.05,
+        "percent_of_page": 2.2,
+        "percent_of_page_dif": -0.1,
+        "link": "#"
+    }
+]
+
+os.makedirs("public", exist_ok=True)
+with open("public/usage.json", "w") as f:
+    json.dump(usage, f, indent=2)
+
+print("✅ Synthetic usage.json generated!")
